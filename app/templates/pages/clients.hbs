@@ -1,0 +1,55 @@
+<header class="header">
+    <h1 class="title">Clients</h1>
+    <p class="meta">Select or edit a clients settings</p>
+</header>
+<div class="wysiwyg">
+    <div class="row">
+        <div class="x-large-12 columns">
+            <table class="expand section">
+                <thead>
+                    <tr>
+                        <th colspan="2">{{>search-box}}</th>
+                        <th>&nbsp;</th>
+                        <th colspan="2"><a href="#" class="btn btn-primary right">Add new</a></th>
+                    </tr>
+                    <tr>
+                        <th width="7%"><i class="icon-caret-down"></i></th>
+                        <th width="15%">Code</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Products</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#repeat 5}}
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>ABC123</td>
+                        <td>John Smith</td>
+                        <td>user.name@company.com</td>
+                        <td><a href="portal-dashboard.html">Portal</a>, <a href="#">Tax</a></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>ABC123</td>
+                        <td>Jane Doe</td>
+                        <td>user.name@bigcompany.com</td>
+                        <td><a href="#">Tax</a></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>ABC123</td>
+                        <td>Mystery Man</td>
+                        <td>mystery@man.com</td>
+                        <td><a href="portal-dashboard.html">Portal</a></td>
+                    </tr>
+                    {{/repeat}}
+                </tbody>
+            </table>
+            <div class="row align-center">
+                {{>pagination}}
+            </div>
+            <p>&nbsp;</p>
+        </div>
+    </div>
+</div>

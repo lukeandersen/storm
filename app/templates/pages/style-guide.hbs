@@ -1,0 +1,169 @@
+<header class="header">
+    <a href="#" class="btn btn-primary">Primary Action</a>
+    <a href="#" class="btn btn-circle"><i class="icon-trash-o"></i></a>
+    <a href="#" class="btn btn-circle"><i class="icon-pencil"></i></a>
+    <h1 class="title">H1 - Main Heading</h1>
+    <p class="meta"><i class="icon-lock"></i> This file is locked - <a href="#">Request access</a></p>
+</header>
+<nav>
+    <ul class="nav section-nav">
+        <li><a href="#">Dashboard</a></li>
+        <li class="dropdown">
+            <a href="#">Contacts</a>
+            <ul role="menu" aria-expanded="false" aria-hidden="true">
+                <li><a href="#">View all</a></li>
+                <li><a href="#">Add new</a></li>
+                <li><a href="#">Delete</a></li>
+            </ul>
+        </li>
+        <li><a href="#" class="active">Documents</a></li>
+        <li><a href="#">Cashbook</a></li>
+    </ul>
+</nav>
+<div class="wysiwyg">
+    <h1>H1 Lorem ipsum dolor sit amet</h1>
+    <h2>H2 Lorem ipsum dolor sit amet</h2>
+    <h3>H3 Lorem ipsum dolor sit amet</h3>
+    <h4>H4 Lorem ipsum dolor sit amet</h4>
+    <h5>H5 Lorem ipsum dolor sit amet</h5>
+    <h6>H6 Lorem ipsum dolor sit amet</h6>
+    <p>Lorem ipsum dolor sit amet, <b>this is some bolded text</b> consectetur adipiscing elit. Cras vitae dolor blandit lorem hibant <i>this is some italic text</i> mauris dictum posuere eget eu mi <a href="#">this is a text link</a>. Maecenas turpis sem, ullamcorper vel tristique a. Maecenas dictum justo eget augue feugiat fringilla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+    <blockquote>Fancy a blockquote, Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. - <em>John Smith</em></blockquote>
+    <small>{{lorem ipsum.sentence}}</small>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, omnis, iure, ut quia veniam aliquid asperiores odio rerum libero quod odit maxime iusto inventore autem nostrum possimus aut dignissimos accusantium.</p>
+    <h3>Lists</h3>
+    <ul>
+        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero ullam harum dolorem nihil sit pariatur vero cum. Voluptatum, mollitia, incidunt, veniam nemo repellendus suscipit quos commodi blanditiis iusto sint minus.</li>
+    </ul>
+    <ol>
+        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, iste repellat laudantium molestiae labore neque doloremque nesciunt atque tenetur ea? Nemo, fuga, quaerat quo modi consectetur consequuntur in aliquam eligendi!</li>
+    </ol>
+    <h3>Table</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Type</th>
+                <th>Example</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#repeat 4}}
+            <tr>
+                <td>{{lorem}}</td>
+                <td>Sunt, repellat consequatur minus culpa unde. Placeat, libero accusamus suscipit debitis quia est. <a href="#">www.google.com</a></td>
+            </tr>
+            {{/repeat}}
+        </tbody>
+    </table>
+    <h3>Slats</h3>
+    <ul class="slats">
+        <li>
+            <div class="row">
+                <div class="small-8 columns">
+                    <h4 class="title"><a href="#">Tax return 2014</a></h4>
+                    <p class="meta">Created Aug 07, 2013 04:00 pm</p>
+                </div>
+                <div class="small-4 columns">
+                    <a href="#" class="btn right">View</a>
+                    <a href="#" class="btn btn-circle right"><i class="icon-trash-o"></i></a>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="row">
+                <div class="small-8 columns">
+                    <h4 class="title"><a href="#">Property insurance</a></h4>
+                    <p class="meta">Created Aug 07, 2013 04:00 pm</p>
+                </div>
+                <div class="small-4 columns">
+                    <a href="#" class="btn right">View</a>
+                    <a href="#" class="btn btn-circle right"><i class="icon-trash-o"></i></a>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <h3>Forms</h3>
+    <form class="form" method="post" action="/">
+        <div class="form-group">
+            <div class="medium-8">
+                <label for="contact-name"><strong>Name</strong> (required)</label>
+                <input type="text" required="" id="contact-name" value="" name="name">
+                <span class="error"><b>Error</b> - Please enter your name</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="medium-8">
+                <label for="contact-email"><strong>Email</strong> (required)</label>
+                <input type="email" required="" id="contact-email" value="" name="email">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="medium-8">
+                <label for=""><strong>Select</strong> (required)</label>
+                <div class="select-wrpper">
+                    <select name="" id="">
+                        <option value="">Lorem ipsum</option>
+                        <option value="">Lorem ipsum</option>
+                        <option value="">Lorem ipsum</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="medium-8">
+                <label for=""><strong>Search</strong></label>
+                {{>search-box}}
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="medium-8">
+                <label for="contact-subject"><strong>Subject</strong></label>
+                <input type="text" id="contact-subject" value="" name="subject">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="medium-9">
+                <label for="contact-message"><strong>Your Message</strong> (required)</label>
+                <textarea required="" rows="10" id="contact-message" name="message"></textarea>
+            </div>
+        </div>
+        <div class="form-group checkbox">
+            <label>
+                <input type="checkbox"> All sounds good?
+            </label>
+        </div>
+        <input type="submit" value="Clear" id="contact-clear" class="btn"> &nbsp;  
+        <input type="submit" value="Submit" id="contact-submit" class="btn btn-primary">
+        <p id="mail-fail" class="error"><b>Error</b> - Oops, looks like something went wrong.</p>
+        <p id="mail-success" class="success"><b>Success</b> - Thanks for contacting us</p>
+    </form>
+    <h3>Tabs</h3>
+    <ul class="tab-nav">
+        <li class="active"><a href="#tab-1">Tab One</a></li>
+        <li><a href="#tab-2">Tab Two</a></li>
+        <li><a href="#tab-3">Tab Three</a></li>
+    </ul>
+    <div id="tab-1" class="tab-content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae dolor blandit mauris dictum posuere eget eu mi. Maecenas turpis sem, ullamcorper vel tristique a, sodales varius nulla. Maecenas dictum justo eget augue feugiat fringilla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. </p>
+    </div>
+    <div id="tab-2" class="tab-content">
+        <p>Ullamcorper vel tristique a, sodales varius nulla. Maecenas dictum justo eget augue feugiat fringilla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. </p>
+    </div>
+    <div id="tab-3" class="tab-content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, minima, quia obcaecati vel ex dolorem optio quas quo impedit laudantium illo animi aut atque nostrum quasi expedita non voluptatibus laboriosam?</p>
+    </div>
+    <h3>Toggle</h3>
+    <div class="toggle">
+        <h5 class="toggle-handle"><span class="icon" data-icon="f"></span> Show more content</h5>
+        <p class="toggle-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae dolor blandit mauris dictum posuere eget eu mi. Maecenas turpis sem, ullamcorper vel tristique a, sodales varius nulla. Maecenas dictum justo eget augue feugiat fringilla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. </p>
+        <h5 class="toggle-handle"><span class="icon" data-icon="f"></span> And some more</h5>
+        <p class="toggle-content">Augue feugiat fringilla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. </p>
+        <h5 class="toggle-handle"><span class="icon" data-icon="f"></span> Show more content</h5>
+        <p class="toggle-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae dolor blandit mauris dictum posuere eget eu mi. Maecenas turpis sem, ullamcorper vel tristique a, sodales varius nulla. Maecenas dictum justo eget augue feugiat fringilla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. </p>
+    </div>
+    <br>
+    <h3>Pagination</h3>
+    {{>pagination}}
+    <br>
+
+</div>

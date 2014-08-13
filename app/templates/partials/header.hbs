@@ -1,0 +1,71 @@
+<header class="navbar" role="banner">
+    <div class="navbar-header">
+        <!-- <h1 class="visually-hidden"><a href="/">Logo</a></h1> -->
+        <a class="navbar-brand" href="login.html">test</a>
+    </div>
+    <div class="navbar-toolbar">
+        <ul class="nav navbar-nav navbar-left">
+            <li><a href="#"><i class="icon-bars"></i></a></li>
+            <li>{{>search-box}}</li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+                <a href="#" class="notification">
+                    <i class="icon-bell"></i>
+                    <span class="notification-badge">3</span>
+                </a>
+                <ul class="dotted-list big" role="menu" aria-expanded="false" aria-hidden="true">
+                    <li>
+                        <a href="#">
+                            <i class="icon-list-alt left"></i>
+                            <span class="block-icon">
+                                <p class="h6 no-marg">New tasks need to be done</p>
+                                <span>2min ago</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="icon-file-text-o left"></i>
+                            <span class="block-icon">
+                                <p class="h6 no-marg">A new file was uploaded</p>
+                                <span>3 hours ago</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="icon-lock left"></i>
+                            <span class="block-icon">
+                                <p class="h6 no-marg">Changed password</p>
+                                <span>9 hours ago</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">See all notifications</a>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#"><i class="icon-comments"></i></a></li>
+            <li class="dropdown profile">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
+                    <span class="meta">
+                        <span class="avatar"><img src="images/avatar.jpg" class="img-circle" alt=""></span>
+                        <span class="avatar-name">John Smith</span>
+                        <i class="icon-caret-down"></i>
+                    </span>
+                </a>
+                <ul role="menu" aria-expanded="false" aria-hidden="true">
+                    <li><a href="#">My Account</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#" class="seperated">Logout</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><i class="icon-ellipsis-v"></i></a>
+            </li>
+        </ul>
+    </div>
+</header>

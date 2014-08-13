@@ -1,0 +1,114 @@
+<header class="header">
+    <a href="portal-upload.html" class="btn btn-primary">Add document</a>
+    <h1 class="title">Approvals</h1>
+</header>
+<div class="wysiwyg">
+    <div class="row">
+        <div class="medium-4 columns section">
+            {{>search-box}}
+        </div>
+    </div>
+    <ul class="slats">
+        {{#repeat 2}}
+        <li>
+            <div class="row">
+                <div class="small-10 columns">
+                    <div class="row collapse">
+                        <div class="small-6 columns">
+                            <h4 class="title"><a href="#" class="open-modal"><i class="icon-file-text-o"></i> 2013-2014_Tax_Return.docx</a></h4>
+                            <p class="meta">Uploaded Aug 07, 2013 04:00 pm</p>
+                        </div>
+                        <div class="small-6 columns">
+                            <div class="stats">
+                                <div class="data">
+                                    <h4 class="no-marg">Yes</h4>
+                                    <p class="no-marg">Approved</p>    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="small-2 columns">
+                    <a href="#" class="btn right open-modal">View</a>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="row">
+                <div class="small-10 columns">
+                    <div class="row collapse">
+                        <div class="small-6 columns">
+                            <h4 class="title"><a href="#" class="open-modal"><i class="icon-table"></i> Q1_BAS_STATEMENT.myox</a></h4>
+                            <p class="meta">Uploaded Aug 07, 2013 04:00 pm</p>
+                        </div>
+                        <div class="small-6 columns">
+                            <div class="stats">
+                                <div class="data">
+                                    <h4 class="no-marg">No</h4>
+                                    <p class="no-marg">Approved</p>    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="small-2 columns">
+                    <a href="#" class="btn right open-modal">View</a>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="row">
+                <div class="small-10 columns">
+                    <div class="row collapse">
+                        <div class="small-6 columns">
+                            <h4 class="title"><a href="#" class="open-modal"><i class="icon-file-o"></i> accounting-fees.pdf</a></h4>
+                            <p class="meta">Uploaded Aug 07, 2013 04:00 pm</p>
+                        </div>
+                        <div class="small-6 columns">
+                            <div class="stats">
+                                <div class="data">
+                                    <h4 class="no-marg">No</h4>
+                                    <p class="no-marg">Approved</p>    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="small-2 columns">
+                    <a href="#" class="btn right open-modal">View</a>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="row">
+                <div class="small-10 columns">
+                    <div class="row collapse">
+                        <div class="small-6 columns">
+                            <h4 class="title"><a href="#" class="open-modal"><i class="icon-table"></i> Q1_BAS_STATEMENT.myox</a></h4>
+                            <p class="meta">Uploaded Aug 07, 2013 04:00 pm</p>
+                        </div>
+                        <div class="small-6 columns">
+                            <div class="stats">
+                                <div class="data">
+                                    <h4 class="no-marg">No</h4>
+                                    <p class="no-marg">Approved</p>    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="small-2 columns">
+                    <a href="#" class="btn right open-modal">View</a>
+                </div>
+            </div>
+        </li>
+        {{/repeat}}
+    </ul>
+
+    <div class="row align-center">
+        {{>pagination}}
+    </div>
+    <br><br>
+</div>
+
+{{>modal}}

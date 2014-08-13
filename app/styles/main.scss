@@ -1,0 +1,406 @@
+@charset "utf-8";
+@import "partials/normalize.scss";
+@import "partials/mixins.scss";
+
+// Site vairables
+
+// Breakpoints
+$small: 33.75em; //540px
+$medium: 48em; //768px
+$large: 62em; //992px
+$x-large: 78em; //1248px
+
+// Colours
+$main: #4A4A5C;
+$gray: #777;
+$lt-gray: #f3f3f3;
+$blue: #00bada;
+$purple: #7A30A2;
+$red: #FF4167;
+$green: #009C95;
+
+@import "partials/type.scss";
+@import "partials/placeholders.scss";
+@import "partials/wysiwyg.scss"; 
+
+
+/* Structure */
+ *, *:before, *:after {-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+html, body{ font-size: 100%; -webkit-font-smoothing: antialiased; height:100%; }
+body {  
+    color:$main; 
+    font-family: "lato", $helvetica;
+    line-height:1.45;
+    height: inherit;
+}
+.row {
+    max-width: 100%; // Or set a max-width to the largest breakpoint width
+}
+img{
+    max-width:100%;
+}
+a {
+    color: $purple;
+    text-decoration: none;
+    &:hover, &:focus {
+        color: darken($purple, 20%);
+    }
+}
+p a {
+    border-bottom: 1px dotted $purple;
+}
+
+// Navbar
+.navbar {
+    @extend %clearfix;
+    background: $purple;
+}
+.navbar-header {
+    @extend %clearfix;
+    display: none;
+    @include breakpoint(large) {
+        display: block;
+        float: left;
+        width: 250px;
+        text-align: center;
+    }
+}
+.navbar-brand {
+    // background: url(http://placehold.it/250x65&text=Logo) no-repeat center;
+    // background-size: contain;
+    width: 250px;
+    height: 65px;
+    display: block;
+    background: $purple;
+    color: white;
+    font-weight: 700;
+    line-height: 3.1;
+    border-right: 2px solid darken($purple, 5%);
+    @include rem(font-size, 20px);
+    &:hover, &:focus {
+        color: white;
+    }
+}
+.navbar-toolbar {
+    @extend %clearfix;
+    .search-box {
+        top: 10px;
+        input {
+            @include placeholder(rgba(white, 0.5));
+            border-color: darken($purple, 10%);
+            color: white;
+        }
+        button {
+            color: darken($purple, 10%);
+        }
+    }
+}
+.nav {
+    @extend %clear-list;
+    a {
+        color: $main;
+    }
+}
+.navbar-nav {
+    @extend %flat-list;
+    a {
+        padding: 0 1.5em;
+        display: inline-block;
+        line-height: 4;
+        color: white;
+    }
+}
+.navbar-left {
+    float: left;
+}
+.navbar-right {
+    float: right;
+}
+.avatar {
+    position: relative;
+    top: 10px;
+    margin-right: 5px;
+}
+
+// Sidebar
+.sidebar {
+    background: $lt-gray;
+    float: left;
+    width: 65px;
+    @include breakpoint(large) {
+        width: 250px;
+    }
+}
+.sidebar-nav {
+    a {
+        @include rem(font-size, 18px);
+        padding:1em;
+        display: block;
+        font-weight: 700;
+        color: $gray;
+        text-align: center;
+        @include breakpoint(large) {
+            text-align: left;
+        }
+        i {
+            width: 20px;
+            display: inline-block;
+            @include breakpoint(large) {
+                margin-right: .75em;
+            }
+        }
+        span {
+            display: none;
+            @include breakpoint(large) {
+                display: inline-block;
+            }
+        }
+    }
+    .active {
+        background-color: white;
+        font-weight: 700;
+        color: $main;
+    }
+}
+
+.main {
+    @extend %clearfix;
+    background: $lt-gray;
+}
+.main-content {
+    padding: 0 .9375em 0 .9375em;
+    background: white;
+    height: inherit;
+    margin-left: 65px;
+    @include breakpoint(large) {
+        margin-left: 250px;
+    }
+}
+.header {
+    margin:3em 0;
+    .btn {
+        float: right;
+        margin-top: 1em;
+        margin-left: 1em;
+    }
+}
+.section-header {
+    margin-bottom: 1em;
+}
+.section-nav {
+    @extend %clearfix;
+    @extend %flat-list;
+    margin:2em 0;
+    border-top: 1px solid $lt-gray;
+    border-bottom: 1px solid $lt-gray;
+    a {
+        display: block;
+        padding: 1em 1.8em 1em 0;
+        font-weight: 700;
+        @include rem(font-size, 1.2em);
+    }
+    .active {
+        color: $purple;
+    }
+    .dropdown {
+        > a:after {
+            content: "\f0d7";
+            font-family: "icons";
+            margin-left: 6px;
+            vertical-align: top;
+        }
+    }
+}
+
+.dropdown {
+    position: relative;
+    &.is-visible {
+        > ul {
+            display: block;
+        }
+    }
+    ul {
+        @extend %clear-list;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: auto;
+        min-width: 180px;
+        background: white;
+        border: 1px solid darken($lt-gray, 5%);
+        border-radius: 10px;
+        box-shadow: 0 3px 3px rgba(black, .08);
+        z-index: 100;
+        padding: 8px 0;
+        display: none;
+        &.big {
+            min-width: 250px;  
+        }
+        li {
+            display: block;
+            float: none;
+            @include rem(font-size, 16px);
+        }
+        a {
+            @extend %clearfix;
+            color: $main;
+            font-weight: 400;
+            line-height: 1.5;
+            padding: 0.5em 1em;
+            display: block;
+            @include rem(font-size, 14px);
+            &:hover, &:focus {
+                background: $purple;
+                color: white;
+            }
+        }
+    }
+}
+.seperated {
+    margin-top: 0.7em;
+    border-top: 1px solid $lt-gray;
+}
+
+.slats {
+    @extend %clear-list;
+    border-top: 1px solid $lt-gray;
+    margin-bottom: 3em;
+    li {
+        border-bottom: 1px solid $lt-gray;
+        display: block;
+        padding: 1em 0;
+    }
+}
+.stats {
+    @extend %clearfix;
+    display: none;
+    @include breakpoint(medium) {
+        display: inline-block;
+    }
+}
+.data {
+    float: left;
+    padding-left:2em;
+    min-width: 100px;
+}
+
+// Lists 
+.dotted-list {
+    @extend %clear-list;
+    li {
+        @extend %clearfix;
+        padding:.5em 0;
+        border-bottom: 1px solid $lt-gray;
+    }
+}
+.pagination {
+    @extend %clear-list;
+    li {
+        display: inline-block;
+        padding: .5em;
+    }
+}
+
+// Login
+.login {
+    background: $lt-gray;
+}
+.login-box {
+    margin-top: 4em;
+}
+.forgot {
+    float: right;
+    margin-top: 4px;
+}
+
+// Widgets 
+.widget {
+    ul {
+        @extend %clear-list;
+        @include breakpoint(medium) {
+            
+        }
+    }
+}
+
+// Badge
+.notification {
+    position: relative;
+} 
+.notification-badge {
+    background: $red;
+    color: white;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    line-height: 1.8;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+// Stats and graphs
+.stat-block {
+    @extend %clearfix;
+    @extend %clear-list;
+    border: 1px solid $lt-gray;
+    border-radius: 5px;
+    li {
+        float: left;
+        width: 25%;
+        padding: 2em;
+        border-right: 1px solid $lt-gray;
+        text-align: center;
+        &:last-child {
+            border: 0;
+        }
+    }
+}
+
+// Bucket 
+.bucket {
+    padding: 2em;
+    border: 5px dashed $lt-gray;
+}
+
+// Modal
+.modal {
+    background: rgba(black, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 101;
+}
+.modal-preview {
+    text-align: center;
+    width: 70%;
+    float: left;
+    .modal-preview-media {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+.modal-data {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30%;
+    height: 100%;
+    background: white;
+    padding: 1.5em;
+}
+
+
+/* MAIN STYLES HERE 
+------------------------------------------------------------------------------------------------------------*/
+@import "partials/forms-buttons.scss";
+@import "partials/plugins.scss";
+@import "partials/helpers.scss";
+@import "partials/grid.scss";
+@import "partials/print.scss";
+

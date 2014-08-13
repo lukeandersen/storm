@@ -1,0 +1,35 @@
+---
+body-class: login
+layout: simple.hbs
+---
+
+<section class="login-box">
+    <div class="row">
+        <div class="small-4 small-centered columns">
+            <header class="align-center">
+                <h1>Login</h1>
+            </header>
+            <form class="form panel raised" action="portal-list.html">
+                <legend class="visually-hidden">Login form</legend>
+                <div class="form-group">
+                    <label for="email"><strong>Email</strong></label>
+                    <input type="email" required="" id="email" value="" name="email">
+                </div>
+                <div class="form-group">
+                    <label for="password"><strong>Password</strong></label>
+                    <input type="password" required="" id="password" value="" name="password">
+                </div>
+                <div class="form-group checkbox">
+                    <label>
+                        <input type="checkbox"> Remember me
+                    </label>
+                    <small class="forgot"><a href="#">Forgot your password?</a></small>
+                </div>
+                <input type="submit" value="Sign in" id="contact-submit" class="btn btn-primary btn-expand">
+            </form> 
+            <footer>
+                <p>Don't have an account? <a href="#">Create an account</a></p>
+            </footer> 
+        </div>
+    </div>
+</section>

@@ -1,0 +1,12 @@
+<header class="header">
+    <h1 class="title">Template list</h1>
+    <p class="meta">List of all pages in this project</p>
+</header>
+
+<ul> 
+	{{#each pages}} 
+		<li><a href ="{{basename}}.html">{{basename}}</a></li> 
+	{{/each}} 
+</ul>
+
+<br><br>

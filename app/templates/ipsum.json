@@ -1,0 +1,14 @@
+{
+  "words": {
+    "count": 5,
+    "units": "words"
+  },
+  "sentence": {
+    "count": 3,
+    "units": "sentences"
+  },
+  "paragraph": {
+    "count": 3,
+    "units": "paragraphs"
+  }
+}

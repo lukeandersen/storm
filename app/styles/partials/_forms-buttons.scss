@@ -1,0 +1,173 @@
+// Forms
+.form {
+	@extend %clearfix;
+	margin-bottom: 2em;
+}
+.form-group { 
+	@extend %clearfix;
+	margin: 0 0 1em;
+}
+
+fieldset {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+legend {
+	margin-bottom: 1em;
+}
+label, .label { 
+	box-sizing: border-box;
+	margin-bottom: 5px;
+	display: inline-block;
+}
+input, select, textarea { 
+	border: 2px solid darken($lt-gray, 15%);
+	padding:10px;
+	outline: 0;
+	width:100%;
+	display: block;
+	background-color: transparent;
+	border-radius: 4px;
+	transition: all 0.2s linear;
+	box-sizing: border-box;
+	@include placeholder(#999);
+	&:hover {
+		border-color: darken($lt-gray, 30%);
+	}
+	&:focus {
+		border-color: $purple;
+	}
+}
+select {
+	padding:8px 10px;
+	-webkit-appearance: button;
+}
+.select-wrpper {
+	position: relative;
+	&:after {
+		content: "\f0dc";
+		font-family: "icons";
+		position: absolute;
+		top: .6em;
+		right: 1em;
+		pointer-events: none;
+	}
+}
+textarea {
+	height:auto;
+	min-height:50px;
+}
+textarea, input[type="text"], input[type="search"], input[type="password"] {
+	-webkit-appearance: none;
+}
+input[type="checkbox"], input[type="radio"] {
+	width: auto;
+	border: 2px solid darken($lt-gray, 15%);
+	margin: 4px 0 0;
+    line-height: normal;
+	@include breakpoint(large) {
+	    border: none;
+	}
+}
+.input-small {
+	max-width: 150px;
+	@include breakpoint(medium) {
+		width: 66%;   
+	}
+}
+.input-medium {
+	max-width: 300px; 
+	@include breakpoint(medium) {
+		width: 66%;  
+	}
+}
+.input-large {
+	max-width: 500px; 
+	@include breakpoint(medium) {
+		width: 66%;  
+	}
+}
+.checkbox, .radio {
+    min-height: 20px;
+    padding-left: 20px;
+    input {
+        float: left;
+        margin-left: -20px;
+    }
+}
+.input-push {
+	margin-top: 2.3em;
+}
+.search-box {
+	position: relative;
+	.search-submit {
+		position: absolute;
+		top: 0;
+		right: .5em;
+	}
+}
+
+
+// Alerts and warnings
+.error {
+	color: $red!important;
+}
+.success {
+	color: $main!important;
+}
+
+// Buttons
+.btn, input[type="submit"], button {
+	background: none;
+	border:1px solid $gray;
+	color: $gray;
+	line-height: 1;
+	text-transform: uppercase;
+	font-weight: 700;
+	display: inline-block;
+	text-align: center;
+	width:auto;
+	padding: 1em 2em;
+	border-radius: 50px;
+	@include rem(font-size, 14px);
+	transition: all 0.2s linear;
+	&:hover, &:focus {
+		border-color: $purple;
+		color: $purple;
+	}
+	@include breakpoint(medium) {
+	    display: inline-block;
+	}
+	+ .btn {
+		margin-left: 1em;
+	}
+	&.btn-sml {
+		padding: 0.8em 1.5em;
+		@include rem(font-size, 12px);
+	}
+	&.btn-expand {
+		padding-right: 0;
+		padding-left: 0;
+		width: 100%;
+	}
+	&.btn-primary {
+		color: white;
+		background-color: $purple;
+		border-color: $purple;
+		&:hover, &:focus {
+			background-color: lighten($purple, 10%);
+			border-color: lighten($purple, 10%);
+		}
+	}
+	&.btn-simple {
+		border: none;
+		padding: 1em;
+	}
+}
+.btn-circle {
+	padding: 1em 1.1em;
+	border-radius: 50%;
+}
+
+
